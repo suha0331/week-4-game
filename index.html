@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="js/bootstrap.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="heading">
+                <h1>Crystals Collector!</h1>
+            </div>
+            <div class="crystals-game">
+                <div class="instruction">
+                    <h3>Instruction:</h3>
+                    <p>You will be given a random number at the start of the game.
+                        <br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                        <br> You win the game by matching your total score to random number, you lose the game if your total scroes goes above the random number.
+                        <br> The value of each crystal is hidden from you until you click on it.
+                        <br> Each time when the game starts, the game will change the values of each crystal.
+                    </p>
+                </div>
+                <div id="random-number">
+                    <h3 id="randomNumber">Random Number:</h3>
+                </div>
+                <div id="scores">
+                    <div id="wins"></div>
+                    <h3 class="section-title">Wins:</h3>
+                    <h3 class="section-title">Losses:</h3>
+                    <h3 id="totalScore">Your Total Score:</h3>
+                </div>
+            </div>
+            <div class="gems-icons">
+                <img id="crystalOne" src="assets/images/gem1.jpg">
+                <img id="crystalTwo" src="assets/images/gem2.jpg">
+                <img id="crystalThree" src="assets/images/gem3.jpg">
+                <img id="crystalFour" src="assets/images/gem4.jpg">
+            </div>
+        </div>
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
