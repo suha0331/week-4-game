@@ -1,28 +1,101 @@
-var crystalOne = Math.floor(Math.random() * (13 - 1) + 1);
-var crystalTwo = Math.floor(Math.random() * (13 - 1) + 1);
-var crystalThree = Math.floor(Math.random() * (13 - 1) + 1);
-var crystalFour = Math.floor(Math.random() * (13 - 1) + 1);
+$(document).ready(function() {
 
-var totalScore = ""; //stores numbers from the crystals
-var randomNumber = Math.floor(Math.random() * (121 - 19) + 19);
-var 
+    var crystalOne = Math.floor(Math.random() * 12 + 1);
+    var crystalTwo = Math.floor(Math.random() * 12 + 1);
+    var crystalThree = Math.floor(Math.random() * 12 + 1);
+    var crystalFour = Math.floor(Math.random() * 12 + 1);
 
-console.log("Crystal One: " + crystalOne);
-console.log("Crystal Two: " + crystalTwo);
-console.log("Crystal Three: " + crystalThree);
-console.log("Crystal Four: " + crystalFour);
+    var totalScore = ""; //stores numbers from the crystals
+    var randomNumber = Math.floor(Math.random() * (121 - 19) + 19);
+    var sum = 0;
+    var crystalValue = 0;
+    var wins = 0;
+    var losses = 0;
 
-console.log("Random Number: " + randomNumber);
-$("#randomNumber").html("Random Number: " + randomNumber);
+    console.log("Crystal One: " + crystalOne);
+    console.log("Crystal Two: " + crystalTwo);
+    console.log("Crystal Three: " + crystalThree);
+    console.log("Crystal Four: " + crystalFour);
 
-$(#img).attr()
+    console.log("Random Number: " + randomNumber);
+    $("#randomNumber").html("Random Number: " + randomNumber);
+
+    $("#gemOne").attr("data-crystalvalue", crystalOne);
+    $("#gemTwo").attr("data-crystalvalue", crystalTwo);
+    $("#gemThree").attr("data-crystalvalue", crystalThree);
+    $("#gemFour").attr("data-crystalvalue", crystalFour);
 
 
+    $("#gemOne").on("click", function() {
+        var crystalValue = ($(this).attr("data-crystalvalue"));
+        crystalValue = parseInt(crystalValue);
+        sum += crystalValue;
 
+        $("#totalScore").text("Your Total Score: " + sum);
+        checkforWin();
+    });
 
-//attribute and parseInt crystalValue = 0; to add up the numbers 
-//HTML cant do that. It only prints
+    $("#gemTwo").on("click", function() {
+        var crystalValue = ($(this).attr("data-crystalvalue"));
+        crystalValue = parseInt(crystalValue);
+        sum += crystalValue;
 
+        $("#totalScore").text("Your Total Score: " + sum);
+        checkforWin();
+    });
 
-//$(#img).attr("data-crystalValue", crystal1);
-//sum =
+    $("#gemThree").on("click", function() {
+        var crystalValue = ($(this).attr("data-crystalvalue"));
+        crystalValue = parseInt(crystalValue);
+        sum += crystalValue;
+
+        $("#totalScore").text("Your Total Score: " + sum);
+        checkforWin();
+    });
+
+    $("#gemFour").on("click", function() {
+        var crystalValue = ($(this).attr("data-crystalvalue"));
+        crystalValue = parseInt(crystalValue);
+        sum += crystalValue;
+
+        $("#totalScore").text("Your Total Score: " + sum);
+        checkforWin();
+
+    });
+
+    checkforWin = function() {
+        console.log('sum: ', sum);
+        console.log('randomNumber: ', randomNumber);
+
+        if (sum === randomNumber) {
+            wins++;
+            var html =
+                // $("").html("<h2>Loser!</h2>");
+                $("#wins").text("Wins: " + wins);
+            // var html =
+            //     "<p>Wins: " + wins + "</p>" +
+            //     "<p>Losses: " + losses + "</p>";
+
+            // document.querySelector("#wins").innerHTML = html;
+            reset();
+
+        } else if (sum >= randomNumber) {
+            losses++;
+            var html =
+                $("#losses").text("Losses: " + losses);
+            // var html =
+            //     "<p>Wins: " + wins + "</p>" +
+            //     "<p>Losses: " + losses + "</p>";
+            // document.querySelector("#losses").innerHTML = html;
+            reset();
+        }
+    };
+
+    reset = function() {
+        sum = 0;
+        $("#totalScore").text("Your Total Score: " + sum);
+        var randomNumber = Math.floor(Math.random() * (121 - 19) + 19);
+        $("#randomNumber").text("Random Number: " + randomNumber);
+    };
+
+});

@@ -13,16 +13,18 @@ body {
     background-color: white;
     background-image: url("../images/pattern.jpg");
     background-repeat: repeat;
-
 }
 
 
 .containe-fluid {
-    max-width: 1200px;
+    width: 43.4%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5%;
     padding-bottom: 5%;
+    position: absolute;
+    z-index: 1;
+    left: 28.4%;
 }
 
 
@@ -32,13 +34,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    padding: 1%;
-    left: 28%;
     background-color: white;
     opacity: 0.9;
-    bottom: 76%;
-
-
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding: 1%;
+    left: 28.4%;
 }
 
 .crystals-game {
@@ -51,36 +52,35 @@ body {
     z-index: 1;
     position: absolute;
     text-align: center;
-    left: 28%;
-    bottom: 38%;
-
+    left: 28.4%;
+    bottom: 24%;
 }
 
 .instruction {
     width: 100%;
     height: 100%;
-    padding-right: 10%;
-    padding-left: 10%;
-    padding-bottom: 5%;
+    padding-right: 7%;
+    padding-left: 7%;
+
 }
 
-#random-number{
+#random-number {
     width: 100%;
     height: auto;
-    background-color: #D5DFFC;
+    background-color: yellow;
     opacity: 0.9;
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
     position: absolute;
     text-align: center;
-    top: 110%;
+    top: 112%;
 }
 
-#scores{
+#scores {
     width: 100%;
     height: auto;
-    background-color: #D5DFFC;
+    background-color: yellow;
     opacity: 0.9;
     margin-left: auto;
     margin-right: auto;
@@ -98,10 +98,9 @@ img.gems {
     text-align: center;
     display: inline-block;
     position: relative;
-
 }
 
-.gems-icons{
+.gems-icons {
     width: 43.4%;
     height: auto;
     background-color: white;
@@ -111,8 +110,15 @@ img.gems {
     z-index: 1;
     position: absolute;
     text-align: center;
-    left: 28%;
-    top: 100%;
-  
+    left: 28.4%;
+    top: 96%;
+}
 
+.background-image {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    opacity: 0.6;
+    margin-left: auto;
+    margin-right: auto;
 }
