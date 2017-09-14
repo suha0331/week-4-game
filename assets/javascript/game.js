@@ -6,7 +6,6 @@ $(document).ready(function() {
     var crystalFour = Math.floor(Math.random() * 12 + 1);
 
     var totalScore = ""; //stores numbers from the crystals
-    var randomNumber = Math.floor(Math.random() * (121 - 19) + 19);
     var sum = 0;
     var crystalValue = 0;
     var wins = 0;
@@ -17,6 +16,7 @@ $(document).ready(function() {
     console.log("Crystal Three: " + crystalThree);
     console.log("Crystal Four: " + crystalFour);
 
+    var randomNumber = Math.floor(Math.random() * (121 - 19) + 19);
     console.log("Random Number: " + randomNumber);
     $("#randomNumber").html("Random Number: " + randomNumber);
 
@@ -63,7 +63,7 @@ $(document).ready(function() {
 
     });
 
-    checkforWin = function() {
+    function checkforWin() {
         console.log('sum: ', sum);
         console.log('randomNumber: ', randomNumber);
 
@@ -91,10 +91,10 @@ $(document).ready(function() {
         }
     };
 
-    reset = function() {
+  function reset() {
         sum = 0;
         $("#totalScore").text("Your Total Score: " + sum);
-        var randomNumber = Math.floor(Math.random() * (121 - 19) + 19);
+        randomNumber = Math.floor(Math.random() * (121 - 19) + 19);
         $("#randomNumber").text("Random Number: " + randomNumber);
     };
 
